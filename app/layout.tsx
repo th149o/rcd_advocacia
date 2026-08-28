@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { EB_Garamond, Manrope } from "next/font/google";
+import { getSiteUrl } from "@/constants/site-url";
 import "./globals.css";
 
 const display = EB_Garamond({
@@ -16,7 +17,7 @@ const sans = Manrope({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

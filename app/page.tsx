@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { getSiteUrl } from "@/constants/site-url";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsappFloat } from "@/components/whatsapp-float";
 import { About } from "@/sections/about";
@@ -16,7 +17,7 @@ import { PracticeAreas } from "@/sections/practice-areas";
 import { Team } from "@/sections/team";
 
 function LegalServiceSchema() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const siteUrl = getSiteUrl();
   const schema = {
     "@context": "https://schema.org",
     "@type": "LegalService",
